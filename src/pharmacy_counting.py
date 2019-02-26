@@ -29,7 +29,11 @@ for line in new[1:]:
         if line[0] not in pre[line[3]]:
             pre[line[3]].append(line[0])
     except:
-        pre[line[4]] = [line[0]]
+        try: 
+            pre[line[3]] = [line[0]]
+        except:
+            print("fu")
+            
     try:
         df[line[3]] = [len(pre[line[3]]),df[line[3]][1]+eval(line[4])]
     except:
