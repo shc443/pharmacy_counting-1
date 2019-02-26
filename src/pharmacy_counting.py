@@ -18,6 +18,7 @@ dat = dat.split('\n');
 #Data Calc
 pre = {}
 df = {}
+new = []
 for line in dat:
     new.append(line.split(','))
 for line in new[1:]:
