@@ -29,17 +29,12 @@ for line in new[1:]:
         if line[0] not in pre[line[3]]:
             pre[line[3]].append(line[0])
     except:
-        try: 
-            pre[line[3]] = [line[0]]
-        except:      
-            print("")
+        pre[line[3]] = [line[0]]
     try:
         df[line[3]] = [len(pre[line[3]]),df[line[3]][1]+eval(line[4])]
     except:
-        try:
-            df[line[3]] = [len(pre[line[3]]),eval(line[4])]
-        except:      
-            print("")
+        df[line[3]] = [len(pre[line[3]]),eval(line[4])]
+
 #Sorting
 LI = []
 for i in df.items():
