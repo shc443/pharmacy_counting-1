@@ -31,8 +31,6 @@ for line in new[1:]:
     except:
         try: 
             pre[line[3]] = [line[0]]
-        except:
-            print("fu")
             
     try:
         df[line[3]] = [len(pre[line[3]]),df[line[3]][1]+eval(line[4])]
