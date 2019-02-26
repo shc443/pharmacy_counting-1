@@ -7,8 +7,8 @@ import csv
 import sys
 import os
 
-inputPath = sys.argv[1]
-outputPath = sys.argv[2]
+inputPath = str(sys.argv[1])
+outputPath = str(sys.argv[2])
 
 #Data Import
 txt = open(inputPath);
