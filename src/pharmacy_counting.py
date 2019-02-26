@@ -4,9 +4,14 @@
 #df2.sort_values(by=[('drug_cost','sum'),'drug_name'], ascending = [False, True]).to_csv('top_cost_drug.txt')
 
 import csv
+import sys
+import os
+
+inputPath = sys.argv[1]
+outputPath = sys.argv[2]
 
 #Data Import
-txt = open('de_cc_data.txt');
+txt = open(inputPath);
 dat = txt.read()
 dat = dat.split('\n');
 
@@ -32,6 +37,6 @@ LI.sort(key = lambda x : (-x[2], x[0]))
 LI.insert(0,['drug_name','num_prescriber','total_cost'])
 
 #Saving
-with open("top_cost_drug.txt", "w") as f:
+with open(outputPath, "w") as f:
     writer = csv.writer(f)
     writer.writerows(LI)
