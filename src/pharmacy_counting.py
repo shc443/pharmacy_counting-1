@@ -18,7 +18,7 @@ dat = dat.split('\n');
 #Data Calc
 pre = {}
 df = {}
-for line in new[1:]:
+for line in dat[1:]:
     try:
         if line[0] not in pre[line[3]]:
             pre[line[3]].append(line[0])
