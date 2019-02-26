@@ -37,7 +37,10 @@ for line in new[1:]:
     try:
         df[line[3]] = [len(pre[line[3]]),df[line[3]][1]+eval(line[4])]
     except:
-        df[line[3]] = [len(pre[line[3]]),eval(line[4])]
+        try:
+            df[line[3]] = [len(pre[line[3]]),eval(line[4])]
+        except:
+            print("jojo")
         
 #Sorting
 LI = []
