@@ -32,13 +32,14 @@ for line in new[1:]:
         try: 
             pre[line[3]] = [line[0]]
         except:      
+            print("")
     try:
         df[line[3]] = [len(pre[line[3]]),df[line[3]][1]+eval(line[4])]
     except:
         try:
             df[line[3]] = [len(pre[line[3]]),eval(line[4])]
-        except:
-        
+        except:      
+            print("")
 #Sorting
 LI = []
 for i in df.items():
