@@ -19,6 +19,7 @@ dat = dat.split('\n');
 pre = {}
 df = {}
 for line in dat[1:]:
+    line = line.split(',')
     try:
         if line[0] not in pre[line[3]]:
             pre[line[3]].append(line[0])
